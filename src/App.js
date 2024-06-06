@@ -1,6 +1,20 @@
 import './App.css';
 import { useState } from 'react';
 
+function Form() {
+  return (
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>
+          Your Name: <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+  );
+}
 
 function Tile(props) {
   // props.row, props.col: indicates the location of the tile
@@ -96,6 +110,7 @@ function App() {
       {
         tiles
       }
+      <Form></Form>
       {/* <Tile row="0" col="0" handler={handleTileClick} status={board[0][0]}></Tile>
       <Tile row="0" col="1" handler={handleTileClick} status={board[0][1]}></Tile>
       <Tile row="0" col="2" handler={handleTileClick} status={board[0][2]}></Tile>
